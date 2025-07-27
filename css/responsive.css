@@ -1,0 +1,209 @@
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  /* Ajustes gerais */
+  .container {
+    padding: 0 var(--space-md);
+  }
+  
+  /* Navbar */
+  .nav-links {
+    gap: var(--space-sm);
+  }
+  
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Portfolio */
+  .portfolio-item {
+    min-width: 320px;
+  }
+  
+  .portfolio-item img {
+    height: 250px;
+  }
+  
+  /* About */
+  .about-container {
+    gap: var(--space-lg);
+  }
+}
+
+/* Smartphones (até 767px) */
+@media (max-width: 767px) {
+  /* Variáveis para mobile */
+  :root {
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: var(--space-sm);
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  /* Layout geral */
+  .hero-container,
+  .about-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Hero */
+  .hero-section {
+    padding-top: 80px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .trust-badges {
+    justify-content: center;
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Portfolio */
+  .portfolio-item {
+    min-width: 280px;
+  }
+  
+  .portfolio-item img {
+    height: 200px;
+  }
+  
+  /* FAQ */
+  .faq-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-image {
+    display: none;
+  }
+  
+  .faq-question {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  /* Contato */
+  .contact-container {
+    gap: var(--space-lg);
+  }
+  
+  /* WhatsApp */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    bottom: var(--space-md);
+    right: var(--space-md);
+  }
+}
+
+/* Pequenos smartphones (até 480px) */
+@media (max-width: 480px) {
+  /* Ajustes finos */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .badge {
+    font-size: 0.8rem;
+  }
+  
+  /* Carrossel ajustado para mobile */
+  .carousel-track {
+    padding: 0 2vw;
+    gap: 4vw;
+  }
+  
+  .portfolio-item {
+    min-width: 85vw;
+    width: 85vw;
+    margin: 0 auto;
+  }
+  
+  .portfolio-item img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .portfolio-details {
+    padding: var(--space-sm);
+  }
+  
+  .portfolio-details h3 {
+    font-size: 1.1rem;
+  }
+  
+  .portfolio-details p {
+    font-size: 0.8rem;
+  }
+  
+  .view-btn {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.9rem;
+  }
+}
+
+/* Suporte ao Swipe - Mobile */
+@media (max-width: 767px) {
+  .carousel-container {
+    overflow: hidden; /* Fundamental para o swipe funcionar */
+  }
+  
+  .carousel-track {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); /* Animação premium */
+    touch-action: pan-y; /* Permite rolagem vertical sem conflito */
+    will-change: transform; /* Otimização de performance */
+  }
+}
